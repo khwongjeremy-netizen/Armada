@@ -39,3 +39,7 @@ Inventory:
 - 1 feedback circuit motor
     - counts the rotations of the motor 
 - Interface controlpad
+
+
+
+https://wokwi.com/projects/399309284079035393 
