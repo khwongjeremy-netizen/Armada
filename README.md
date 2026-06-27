@@ -42,4 +42,4 @@ Inventory:
 
 
 
-https://wokwi.com/projects/399309284079035393 
+https://wokwi.com/projects/399309284079035393
