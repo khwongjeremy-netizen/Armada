@@ -43,3 +43,15 @@ Inventory:
 
 
 https://wokwi.com/projects/399309284079035393
+
+Shopping:
+6vx servo motor - MG966R Series 
+Servo Driver PCA9685 
+BAttery Pack(5V, 2200 mAh)
+Arduino Uno
+Arduino HC-05
+Bread Board
+Jumper Wires
+NEMA 17 Servo Motor
+A4988 Stepper Motor Driver 
+LiPo 11.1V, 2200mAh,3s
