@@ -40,11 +40,11 @@ Inventory:
     - counts the rotations of the motor 
 - Interface controlpad
 
-
+https://wokwi.com/projects/468093537466099713
 
 https://wokwi.com/projects/399309284079035393
 
-Shopping:
+Shopping: 
 6vx servo motor - MG966R Series 
 Servo Driver PCA9685 
 BAttery Pack(5V, 2200 mAh)
@@ -55,3 +55,79 @@ Jumper Wires
 NEMA 17 Servo Motor
 A4988 Stepper Motor Driver 
 LiPo 11.1V, 2200mAh,3s
+
+https://wokwi.com/projects/468044397198469121
+
+
+#include <Servo.h>
+
+// 1. Create Servo Objects for the Arm Joints
+Servo joints[6];
+const int servoPins[6] = {3, 5, 6, 9, 10, 11}; // Digital PWM pins
+
+// 2. Define Stepper Driver Pins (A4988)
+const int stepPin = 4;
+const int dirPin = 2;
+
+void setup() {
+  // Initialize Serial communication at 9600 baud rate
+  Serial.begin(9600);
+  
+  // Attach all 6 servos to their physical data pins
+  for(int i = 0; i < 6; i++) {
+    joints[i].attach(servoPins[i]);
+    joints[i].write(90); // Start every joint at a safe middle angle (90 degrees)
+  }
+  
+  // Set Stepper driver pins as outputs
+  pinMode(stepPin, OUTPUT);
+  pinMode(dirPin, OUTPUT);
+  
+  Serial.println("=== 6-Axis Arm Simulation Online ===");
+  Serial.println("Commands:");
+  Serial.println("  1 to 6 : Sweep specific joint servo");
+  Serial.println("  F / B  : Spin Stepper Base Forward / Backward");
+}
+
+void loop() {
+  // Check if a command was typed into the Serial Monitor
+  if (Serial.available() > 0) {
+    char cmd = Serial.read();
+    
+    // --- Servo Joint Testing Logic ---
+    if (cmd >= '1' && cmd <= '6') {
+      int jointIndex = cmd - '1'; // Convert character '1'-'6' to index 0-5
+      Serial.print("Testing Joint Servo #");
+      Serial.println(jointIndex + 1);
+      
+      // Sweep the selected joint out and back to prove it moves cleanly
+      joints[jointIndex].write(150);
+      delay(300);
+      joints[jointIndex].write(30);
+      delay(300);
+      joints[jointIndex].write(90); // Return to neutral
+    }
+    
+    // --- Stepper Base Testing Logic ---
+    else if (cmd == 'F' || cmd == 'f') {
+      Serial.println("Spinning Stepper Base Forward...");
+      digitalWrite(dirPin, HIGH); // Set direction
+      for(int i = 0; i < 200; i++) { // Step 200 times
+        digitalWrite(stepPin, HIGH);
+        delayMicroseconds(2000);
+        digitalWrite(stepPin, LOW);
+        delayMicroseconds(2000);
+      }
+    }
+    else if (cmd == 'B' || cmd == 'b') {
+      Serial.println("Spinning Stepper Base Backward...");
+      digitalWrite(dirPin, LOW); // Reverse direction
+      for(int i = 0; i < 200; i++) {
+        digitalWrite(stepPin, HIGH);
+        delayMicroseconds(2000);
+        digitalWrite(stepPin, LOW);
+        delayMicroseconds(2000);
+      }
+    }
+  }
+}
