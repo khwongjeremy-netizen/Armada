@@ -28,7 +28,7 @@ The arm achieves 6 degress of freedom by distribuitng physical loads across 7 mo
 
 Testing and simulation:
 
-* Testing model Mark 1 Arm through simulation on Wokwi[https://wokwi.com/projects/468107537102683137]
+* Testing model Mark 1 Arm through simulation on Wokwi[https://github.com/khwongjeremy-netizen/Armada]
 * Used Ai as a feedback and educational tool for project: [https://gemini.google.com/app/66d2c7d817efa6f5]
 Refer to image for refrencing of inspired model.
 
