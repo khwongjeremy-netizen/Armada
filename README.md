@@ -36,7 +36,7 @@ Refer to image for refrencing of inspired model.
 ---
 
 *** NOTE
-This is a temporate shopping list I haven't finalized decisions on a few design choices for the arm(powering mechanism and, and blutooth input) these are the current items I require to build a majority of the arm but not a MVP
+This is a temporate shopping list I haven't finalized decisions on a few design choices for the arm(powering mechanism and, and blutooth input) these are the current items I require to build a majority of the arm but not a MVP. Futhermore as I do not own a 3D printer, currently I am focusing on the development of electronic mechanisms and will shift to structural design afterwards.
 
 
 ***Temporate Shopping list:
@@ -47,11 +47,19 @@ This is a temporate shopping list I haven't finalized decisions on a few design 
 * PCA9685 Servo Driver / 1 / LEts the Arduino cleanly control all 6 servos at once.
 * NEMA 17 Stepper Motor / 1 / High-torque motor for powering base
 * A4988 Stepper Driver / 1 / Controls the stepper motor's accuracy
-* Breadboard & Jumper Wires / 1/ Conncets all the components
+* Breadboard & Jumper Wires / 1/ Connects all the components
+* Power Adapter / 1 / Converts outlet energy to ideal voltage
+* Barrel Jack / 1 / let's the power adapter be plugged into the breadboard
 
 Link to shopping list:
 * 6 x Servo Motors: https://shorturl.at/p2Nvs $39.89
 * HC-05 Bluetooth Module: https://shorturl.at/JnLG8 $12.57
 * Ardruino Uno starter kit: https://shorturl.at/TtV8g $57.99
 * Stepper Motor: https://shorturl.at/SJR3r $18.99 
-* Total: 129.44$ 
+* Power Adapter: https://shorturl.at/nnPwV $21.99
+* Barrel Jack: https://shorturl.at/DMEaL $11.99
+* Total: 163.42$CAD
+
+I am currently asking for a 165$CAD fund to cover temporate costs with an additional 30$CAD for room of error. 
+
+Total: $195.00 CAD
