@@ -42,5 +42,13 @@ Temporate Shopping list:
 * PCA9685 Servo Driver / 1 / LEts the Arduino cleanly control all 6 servos at once.
 * NEMA 17 Stepper Motor / 1 / High-torque motor for powering base
 * A4988 Stepper Driver / 1 / Controls the stepper motor's accuracy
-* 5V Battery pack (2200 mAh) / 1 / Provides high-voltage power to give the motorsfull torque. 
 * Breadboard & Jumper Wires / 1/ Conncets all the components
+
+
+Link to shopping list:
+* 6 x Servo Motors: https://shorturl.at/p2Nvs $39.89
+* HC-05 Bluetooth Module: https://shorturl.at/JnLG8 $12.57
+* Ardruino Uno starter kit: https://shorturl.at/TtV8g $57.99
+* Stepper Motor: https://shorturl.at/SJR3r $18.99 
+
+* Total: 129.44$ 
