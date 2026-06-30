@@ -12,13 +12,13 @@ Goals:
 - Create a unique aesthetic that adds decor to room environment 
 
 Theoretical Logic: 
-
 1. Input: A user-worn wristband is intergrated with. an IMU sensor tracking linear velocities and spatial orientation data, transalting it to Bluetooth data
 2. A camera built into the base verifies arm movements picked up through bluetooth checking it with video recording while also scanning the room to verify the user is within range 
 3. Signals are converted into target PWM signals to series of servo motors to execute physical movement 
 
-Model layout:
+---
 
+***Model layout:
 The arm achieves 6 degress of freedom by distribuitng physical loads across 7 motors:
 * Base (1 Stepper Motor): A hgih torque NEMA 17 Motor sits in the abse pedestal to spin the entire arm left and rihgt.
 * Shoulder(2 Servos): Two heavy-duty sevos work sisde-by-side to push and pull the heavy main arm forward and backward.
@@ -26,16 +26,21 @@ The arm achieves 6 degress of freedom by distribuitng physical loads across 7 mo
 * Wrist (2 Servos): Two Servops let the wrist tilt up/down adn rotate side-to-side.
 * Claw ( 1 Servo): One last servo operatesa the gripper fingers to clamp onto objects.
 
-Testing and simulation:
+---
 
+***Testing and simulation:
 * Testing model Mark 1 Arm through simulation on Wokwi[https://github.com/khwongjeremy-netizen/Armada]
 * Used Ai as a feedback and educational tool for project: [https://gemini.google.com/app/66d2c7d817efa6f5]
 Refer to image for refrencing of inspired model.
 
-Temporate Shopping list:
+---
 
+*** NOTE
+This is a temporate shopping list I haven't finalized decisions on a few design choices for the arm(powering mechanism and, and blutooth input) these are the current items I require to build a majority of the arm but not a MVP
+
+
+***Temporate Shopping list:
 * Component/ QTY / USE
-
 * Arduino Uno / 1 / The main brain that processes inputs and outputs
 * HC-05 Bluetooth Module / 1 / Recieves bluetooth singals from wristband. 
 * MG996R Servos / 6 / Powers the shoulder, elbow, wrist and gripper joints.
@@ -44,11 +49,9 @@ Temporate Shopping list:
 * A4988 Stepper Driver / 1 / Controls the stepper motor's accuracy
 * Breadboard & Jumper Wires / 1/ Conncets all the components
 
-
 Link to shopping list:
 * 6 x Servo Motors: https://shorturl.at/p2Nvs $39.89
 * HC-05 Bluetooth Module: https://shorturl.at/JnLG8 $12.57
 * Ardruino Uno starter kit: https://shorturl.at/TtV8g $57.99
 * Stepper Motor: https://shorturl.at/SJR3r $18.99 
-
 * Total: 129.44$ 
